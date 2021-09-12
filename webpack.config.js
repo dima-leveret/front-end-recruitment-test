@@ -156,7 +156,7 @@ Encore.configureDevServerOptions((options) => {
 | favorite CSS precompiler
 |
 */
-// Encore.enableSassLoader()
+Encore.enableSassLoader()
 // Encore.enableLessLoader()
 // Encore.enableStylusLoader()
 
@@ -170,7 +170,7 @@ Encore.configureDevServerOptions((options) => {
 |
 */
 // Encore.enablePostCssLoader()
-// Encore.configureCssLoader(() => {})
+Encore.configureCssLoader(() => {})
 
 /*
 |--------------------------------------------------------------------------
@@ -186,6 +186,8 @@ Encore.configureDevServerOptions((options) => {
 //   runtimeCompilerBuild: false,
 //   useJsx: false
 // })
+
+Encore.enableReactPreset()
 
 /*
 |--------------------------------------------------------------------------

@@ -36,6 +36,31 @@ main {
   align-items: center;
   display: flex;
   justify-content: center;
+  
+  ul {
+    list-style: none;
+  }
+
+  li {
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 25px;
+  }
+
+  img {
+    width: 150px;
+  }
+
+  li:before {
+    content: '—';
+    position: absolute;
+    left: 0;
+  }
+
+  code {
+    font-size: 16px;
+    background: #e6e2ff;
+  }
 }
 
 .title {
@@ -54,27 +79,7 @@ p {
   margin-bottom: 20px;
 }
 
-main ul {
-  list-style: none;
-}
-
-main img {
-  max-width: 100%;
-}
-
-main li {
-  margin-bottom: 5px;
-  position: relative;
-  padding-left: 25px;
-}
-
-main li:before {
-  content: '—';
-  position: absolute;
-  left: 0;
-}
-
-main code {
-  font-size: 16px;
-  background: #e6e2ff;
+.img-section {
+  width: 910px;
+  background-color: gray;
 }
