@@ -46,6 +46,7 @@ Encore.setPublicPath('/assets')
 |
 */
 Encore.addEntry('app', './frontend/assets/js/app.js')
+Encore.addEntry('form', './frontend/assets/js/form.js')
 
 /*
 |--------------------------------------------------------------------------

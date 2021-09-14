@@ -1,11 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
 
+
 html, body {
   background-color: #F7F8FA;
   font-family: 'Poppins', sans-serif;
   height: 100vh;
   color: #46444c;
   position: relative;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 body:before {
@@ -29,11 +36,11 @@ a {
 }
 
 main {
-  max-width: 620px;
-  margin: auto;
+  max-width: 1500px;
+  width: 100%;
+  margin: 0;
   height: 100vh;
-  padding: 0 30px;
-  align-items: center;
+  padding: 0;
   display: flex;
   justify-content: center;
   
@@ -60,6 +67,12 @@ main {
   code {
     font-size: 16px;
     background: #e6e2ff;
+  }
+
+  .wellcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 

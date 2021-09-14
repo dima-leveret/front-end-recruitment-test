@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+%inputs-grid {
+    align-self: end;
+    max-width: 550px;
+    width: 100%;
+    display: grid;
+    column-gap: 15px;
+    row-gap: 23px;
+    margin-top: 25px;
+
+    div {
+        background-color: #fff;
+        border-radius: 3px;
+        border-bottom: 3px solid #d9d9d9;
+    }
+}
+
+%inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px;
+
+    lable {
+        font-size: 13px;
+        font-weight: 600;
+    }
+}
+
+%headers {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.form-container {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    max-width: 1024px;
+    width: 100%;
+    height: fit-content;
+    margin:10px;
+}
+
+.form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    max-width: 880px;
+    width: 100%;
+    height: auto;
+
+    &-inputs {
+        max-width: 580px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    &-inputs-order {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+.form-header {
+    @extend %headers;
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+
+    div {
+        display: inline-block;
+        text-align: center;
+        width: 20px;
+        height: 20px;
+        background-color: black;
+        color: #f2f2f2;
+        border-radius: 50px;
+        margin-right: 10px;
+    }
+}
+
+
+.form-personal-information {
+    @extend %inputs-grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows:  repeat(4, 50px);
+}
+
+.form-inputs-fName, 
+.form-inputs-lName, 
+.form-inputs-postalCode, 
+.form-inputs-creditCardNum, 
+.form-inputs-securityCode,
+.form-inputs-expiratinDate{
+    @extend %inputs;
+
+    input {
+        border: none;
+        font-size: 17px;
+    }
+
+}
+
+.form-inputs-email  {
+    @extend %inputs;
+    grid-column: 1/3;
+    grid-row: 2;
+
+    input {
+        border: none;
+        font-size: 17px;
+    }
+}
+
+.form-inputs-contry {
+    @extend %inputs;
+    select {
+        border: none;
+        font-size: 17px;
+        background-color: #fff;
+    }
+}
+
+.form-inputs-phoneNum {
+    grid-column: 1/3;
+    grid-row: 4;
+
+    @extend %inputs;
+
+    input {
+        border: none;
+        font-size: 17px;
+    }
+}
+
+.form-payments-details {
+    margin-top: 25px;
+}
+
+.form-payments-details {
+    @extend %inputs-grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows:  repeat(2, 50px);
+}
+
+.form-inputs-creditCardNum {
+    grid-column: 1/3;
+    grid-row: 1;
+}
+
+.form-order {
+    max-width: 275px;
+    width: 100%;
+    height: fit-content;
+    background-color: #fff;
+
+    margin-top: 70px;
+    padding: 5px;
+    
+    &-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border: 1px #dcdcdc dashed;
+        
+    }
+
+    &-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 240px;
+        width: 100%;
+        border-bottom: 1px #dcdcdc dashed;
+        padding-bottom: 20px;
+    }
+
+    &-section-total {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 240px;
+        width: 100%;
+        margin: 15px 0;
+
+        .total {
+            span {
+                font-weight: 700;
+            }
+        }
+
+        .value {
+            span {
+                font-weight: 700;
+                font-size: 30px;
+            }
+        }
+    } 
+
+    &-products, &-price, &-total-tax, &-value {
+        display: flex;
+        flex-direction: column;
+        span {
+            margin: 10px 0;
+        }
+    }
+
+    &-header {
+        @extend %headers;
+        margin: 15px;
+        align-self: flex-start;
+    }
+
+}
+
+.btn-container {
+    align-self: flex-start;
+    display: flex;
+    justify-content: center;
+    max-width: 550px;
+    width: 100%;
+    height: 53px;
+    margin: 38px 0 35px 30px;
+    background-color: #6bd400;
+    border-radius: 3px;
+    border-bottom: 3px solid #5cb204;
+    cursor: pointer;
+
+    .btn {
+        background-color: #6bd400;
+        color: #fff;
+        border: none;
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: 700;
+        cursor: pointer;
+        text-align: center;
+    }
+}
+
