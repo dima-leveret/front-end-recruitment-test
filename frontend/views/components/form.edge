@@ -1,10 +1,10 @@
 <div class="form-container" > 
-    <div class="form" >
+    <form method="GET" class="form" >
 
         <div class="form-inputs-order" >
             <div class="form-inputs" > 
                 <span class="form-header" ><div>1</div> personal information</span>
-                <form class="form-personal-information" >
+                <div class="form-personal-information" >
                     <div class="form-inputs-fName" >
                         <lable for="fName" > First name </lable>
                         <input type="text" id="fName" name="fName" placeholder="Elon" />
@@ -34,13 +34,18 @@
                         <lable for="phoneNum" > Phone Number </lable>
                         <input type="text" id="phoneNum" name="phoneNum" placeholder="(211) 693 92 93" />
                     </div>
-                </form>
+                </div>
 
-                <span class="form-header" ><div>2</div> payments details</span>
-                <form class="form-payments-details" >
+                <span class="form-header" ><div>2</div> payments details 
+                    <img class="form-header-icon" src="https://img.icons8.com/material/24/000000/lock--v1.png"/>  
+                </span>
+                <div class="form-payments-details" >
                     <div class="form-inputs-creditCardNum" >
-                        <lable for="creditCardNum" > Credit Card Number </lable>
-                        <input type="text" id="creditCardNum" name="creditCardNum" placeholder="0000-0000-0000-0000" />
+                        <div>
+                            <lable for="creditCardNum" > Credit Card Number </lable>
+                            <input type="text" id="creditCardNum" name="creditCardNum" placeholder="0000-0000-0000-0000" />
+                        </div>
+                        <img src="https://img.icons8.com/ios/24/000000/visa.png"/>
                     </div>
                     <div class="form-inputs-securityCode" >
                         <lable for="securityCode" > Security Code </lable>
@@ -50,7 +55,7 @@
                         <lable for="expiratinDate" > Security Code </lable>
                         <input type="text" id="expiratinDate" name="expiratinDate" placeholder="MM/YY" />
                     </div>
-                </form>
+                </div>
             </div>
 
             <div class="form-order" >
@@ -91,9 +96,10 @@
                 </div>
             </div>
         </div>
-        
-        <div class="btn-container" >
-            <button class="btn" >complete purchase</button>
-        </div>
-    </div>
+
+        <button type="submit" class="btn" > 
+        <img src="https://img.icons8.com/material/24/ffffff/shopping-cart--v1.png"/> 
+            <span>complete purchase</span>  
+        </button> 
+    </form>
 </div>
