@@ -17,6 +17,13 @@
 }
 
 %inputs {
+    border: none;
+    font-size: 17px;
+    outline: none;
+    width: 100%;
+}
+
+%inputs-comtainer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -104,32 +111,31 @@
 .form-inputs-creditCardNum, 
 .form-inputs-securityCode,
 .form-inputs-expiratinDate{
-    @extend %inputs;
+    @extend %inputs-comtainer;
 
     input {
-        border: none;
-        font-size: 17px;
+        @extend %inputs;
     }
 
 }
 
 .form-inputs-email  {
-    @extend %inputs;
+    @extend %inputs-comtainer;
     grid-column: 1/3;
     grid-row: 2;
 
     input {
-        border: none;
-        font-size: 17px;
+        @extend %inputs;
     }
 }
 
 .form-inputs-contry {
-    @extend %inputs;
+    @extend %inputs-comtainer;
     select {
         border: none;
         font-size: 17px;
         background-color: #fff;
+        outline: none;
     }
 }
 
@@ -137,11 +143,10 @@
     grid-column: 1/3;
     grid-row: 4;
 
-    @extend %inputs;
+    @extend %inputs-comtainer;
 
     input {
-        border: none;
-        font-size: 17px;
+        @extend %inputs;
     }
 }
 
@@ -156,18 +161,12 @@
 }
 
 .form-inputs-creditCardNum {
-    @extend %inputs;
+    @extend %inputs-comtainer;
     grid-column: 1/3;
     grid-row: 1;
 
     flex-direction: row;
     align-items: center;
-
-    input {
-        border: none;
-        font-size: 17px;
-       
-    }
 
     div {
        display: flex;
@@ -280,3 +279,13 @@
 }
 
 
+@media only screen and (max-width: 890px) {
+    .form-inputs-order {
+        justify-content: center;
+    }
+
+    .btn {
+        margin: 10px;
+        align-self: center;
+    }
+}
