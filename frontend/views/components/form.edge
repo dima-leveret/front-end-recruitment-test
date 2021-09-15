@@ -7,19 +7,20 @@
                 <div class="form-personal-information" >
                     <div class="form-inputs-fName" >
                         <lable for="fName" > First name </lable>
-                        <input type="text" id="fName" name="fName" placeholder="Elon" />
+                        <input required type="text" id="fName" name="fName" placeholder="Elon" />
                     </div>
                     <div class="form-inputs-lName" >
                         <lable for="lName" > Last name </lable>
-                        <input type="text" id="lName" name="lName" placeholder="Musk" />
+                        <input required type="text" id="lName" name="lName" placeholder="Musk" />
                     </div>
                     <div class="form-inputs-email" >
                         <lable for="email" > Email </lable>
-                        <input type="email" id="email" name="email" placeholder="elon@spacex.com" />
+                        <input required type="email" id="email" name="email" placeholder="elon@spacex.com" />
                     </div>
-                    <div class="form-inputs-contry" >
-                        <lable for="contry" > Contry </lable>
-                        <select id="contry" name="contry" >
+                    <div class="form-inputs-country" >
+                        <lable for="country" > Country </lable>
+                        <select required id="country" name="country" >
+                            <option label="Select the country" selected disabled ></option>
                             <option>United States</option>
                             <option>United Kingdom</option>
                             <option>Poland</option>
@@ -28,11 +29,11 @@
                     </div>
                     <div class="form-inputs-postalCode" >
                         <lable for="postalCode" > Postal Code </lable>
-                        <input type="text" id="postalCode" name="postalCode" placeholder="10001" />
+                        <input required type="number" id="postalCode" name="postalCode" placeholder="10001" />
                     </div>
                     <div class="form-inputs-phoneNum" >
                         <lable for="phoneNum" > Phone Number </lable>
-                        <input type="text" id="phoneNum" name="phoneNum" placeholder="(211) 693 92 93" />
+                        <input required type="tel" id="phoneNum" name="phoneNum" placeholder="(211) 693 92 93" />
                     </div>
                 </div>
 
@@ -43,17 +44,17 @@
                     <div class="form-inputs-creditCardNum" >
                         <div>
                             <lable for="creditCardNum" > Credit Card Number </lable>
-                            <input type="text" id="creditCardNum" name="creditCardNum" placeholder="0000-0000-0000-0000" />
+                            <input required type="number" id="creditCardNum" name="creditCardNum" placeholder="0000-0000-0000-0000" />
                         </div>
                         <img src="https://img.icons8.com/ios/24/000000/visa.png"/>
                     </div>
                     <div class="form-inputs-securityCode" >
                         <lable for="securityCode" > Security Code </lable>
-                        <input type="text" id="securityCode" name="securityCode" placeholder="***" />
+                        <input required type="number" id="securityCode" name="securityCode" placeholder="***" />
                     </div>
-                    <div class="form-inputs-expiratinDate" >
-                        <lable for="expiratinDate" > Security Code </lable>
-                        <input type="text" id="expiratinDate" name="expiratinDate" placeholder="MM/YY" />
+                    <div class="form-inputs-expirationDate" >
+                        <lable for="expirationDate" > Expiration Date </lable>
+                        <input pattern="[0-9]{2}/[0-9]{2}" required type="text" id="expirationDate" name="expirationDate" placeholder="MM/YY" />
                     </div>
                 </div>
             </div>

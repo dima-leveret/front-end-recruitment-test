@@ -110,11 +110,17 @@
 .form-inputs-postalCode, 
 .form-inputs-creditCardNum, 
 .form-inputs-securityCode,
-.form-inputs-expiratinDate{
+.form-inputs-expirationDate{
     @extend %inputs-comtainer;
 
     input {
         @extend %inputs;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
     }
 
 }
@@ -129,7 +135,7 @@
     }
 }
 
-.form-inputs-contry {
+.form-inputs-country {
     @extend %inputs-comtainer;
     select {
         border: none;
