@@ -1,3 +1,11 @@
+# Explanation
+The solution to task 1 looks like very simple because I decided not to wrist time on it and concentrate on the rest of the tasks.
+
+I decided to combine HTML attributes validation with JS validation. I understand that it would be better to do the JS validation only to be able to manipulate the state of the data.
+
+Maybe my solution of the task looks like dirty but it so due to the recruitment tasks is very unusual and the majority of the I tried to understand how does Adonis JS work.
+
+
 # Snowdog Front-end Recruitment test
 
 * Please use real Github accounts, we want to check your contributions history since we use, create and contribute to open source.
