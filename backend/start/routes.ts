@@ -52,6 +52,9 @@ Route.get('/checkout', async ({ view }) => {
 })
 
 Route.post('/order', async ({ request, response }) => {
+  console.log('request ', request)
+  console.log('response ', response)
+
   const orderSchema = schema.create({
     firstName: schema.string(),
     lastName: schema.string(),

@@ -1,6 +1,7 @@
 import '../css/form.scss'
 
 const form = document.getElementById('form')
+const btn = document.getElementById('btn')
 
 const fName = document.getElementById('fName')
 const lName = document.getElementById('lName')
@@ -53,4 +54,60 @@ form.addEventListener('submit', (event) => {
   if (hasLetters(expirationDate)) {
     alert('Please enter the correct expiration date MM/YY')
   }
+
+  let data = {
+    firstName: fName.value,
+    lastName: lName.value,
+    email: email.value,
+    country: country.value,
+    postalCode: postalCode.value,
+    phone: phoneNum.value,
+    creditCard: creditCardNum.value,
+    CVV: securityCode.value,
+    expDate: expirationDate.value,
+  }
+
+  fetch('/order', {
+    method: 'POST',
+    headers: {
+      'Contetn-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  })
+    .then(response => response.json())
+    .then(data => console.log(data))
 })
+
+// btn.addEventListener('click', (e) => {
+//   e.preventDefault()
+//   const data = fetch('/order', {
+//     method: 'POST',
+//     body: JSON.stringify(),
+//   })
+//     .then(response => console.log(response))
+//     .then(body => console.log(body))
+//   console.log(data)
+// })
+
+const dataMockup = {
+  firstName: 'dima',
+  lastName: 'leveret',
+  email: 'dima@gmail.com',
+  country: 'Poland',
+  postalCode: '00000',
+  phone: '000000000',
+  creditCard: '0000 0000 0000 0000',
+  CVV: '000',
+  expDate: '00/00',
+}
+
+fetch('/order', {
+  method: 'POST',
+  headers: {
+    'Contetn-Type': 'application/vnd.api+json',
+  },
+  body: JSON.stringify(dataMockup),
+})
+  .then(response => response.json())
+  .then(data => console.log(data))
+
