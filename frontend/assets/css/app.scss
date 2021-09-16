@@ -96,3 +96,15 @@ p {
   width: 910px;
   background-color: gray;
 }
+
+.tasks-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid violet;
+  a {
+    border: 1px solid blue;
+    margin: 5px;
+    padding: 5px;
+  }
+}

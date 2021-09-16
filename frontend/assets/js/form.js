@@ -70,44 +70,23 @@ form.addEventListener('submit', (event) => {
   fetch('/order', {
     method: 'POST',
     headers: {
-      'Contetn-Type': 'application/json',
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify(data),
   })
-    .then(response => response.json())
-    .then(data => console.log(data))
+    .then((response) => {
+      if (response.ok) {
+        return response.json()
+      } else {
+        alert('Something went wrong')
+      }
+    })
+    .then((data) => {
+      if (data) {
+        return alert(data.message)
+      } else {
+        alert('Can not get any data')
+      }
+    })
+    .catch(error => console.log(error))
 })
-
-// btn.addEventListener('click', (e) => {
-//   e.preventDefault()
-//   const data = fetch('/order', {
-//     method: 'POST',
-//     body: JSON.stringify(),
-//   })
-//     .then(response => console.log(response))
-//     .then(body => console.log(body))
-//   console.log(data)
-// })
-
-const dataMockup = {
-  firstName: 'dima',
-  lastName: 'leveret',
-  email: 'dima@gmail.com',
-  country: 'Poland',
-  postalCode: '00000',
-  phone: '000000000',
-  creditCard: '0000 0000 0000 0000',
-  CVV: '000',
-  expDate: '00/00',
-}
-
-fetch('/order', {
-  method: 'POST',
-  headers: {
-    'Contetn-Type': 'application/vnd.api+json',
-  },
-  body: JSON.stringify(dataMockup),
-})
-  .then(response => response.json())
-  .then(data => console.log(data))
-
