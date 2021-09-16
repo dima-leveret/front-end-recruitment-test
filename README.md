@@ -1,5 +1,5 @@
 # Explanation
-The solution to task 1 looks like very simple because I decided not to wrist time on it and concentrate on the rest of the tasks.
+The solution to task 1 looks like very simple because I decided not to waste the time on it and concentrate on the rest of the tasks.
 
 I decided to combine HTML attributes validation with JS validation. I understand that it would be better to do the JS validation only to be able to manipulate the state of the data.
 
